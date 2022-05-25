@@ -1,0 +1,38 @@
+.parent{
+    position: relative;
+}
+
+.above-fold{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-cake{
+    width: 300px; 
+    position: absolute; 
+    top: 50%; 
+    right: 10%;
+    transform: translateY(-50%);
+    animation: run ease-in-out 2s;
+    display: none;
+}
+.show{
+    display: block;
+} 
+
+@keyframes run{
+    from{
+        right: -50%;
+    }
+    to{
+        right: 10%;
+    }
+}
+
+@media (max-width: 769px){
+    .img-cake{
+        display: none;
+    }
+}
